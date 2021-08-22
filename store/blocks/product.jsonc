@@ -1,7 +1,62 @@
 {
+  /* Chama como serão apresentados os produtos de forma individual. */
   "store.product": {
     "children": [
-      
+      "breadcrumb",
+      "flex-layout.row#main2",
+      "product-description"
     ]
+  },
+
+  "flex-layout.row#main2": {
+    "props": {
+      "marginTop": 6,
+      "marginBotton": 6,
+      "blockClass": "flexLayoutMain2"
+    },
+    /* Separa a pagina em duas colunas. */
+    "children": [
+      "flex-layout.col#left1",
+      "flex-layout.col#right1"
+    ]
+  },
+
+
+  /* Coluna com imagens. */
+  "flex-layout.col#left1": {
+    "children": [
+      "product-images"
+    ]
+  },
+  
+  /* Coluna com informaçãoes, simuladores e botão de compra. */
+  "flex-layout.col#right1": {
+    "props": {
+      "preventVerticalStretch": true,
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "product-name",
+      "product-identifier.product",
+      "product-price",
+      "flex-layout.row#qty-sku",
+      "shipping-simulator",
+      "add-to-cart-button"
+    ]
+  },
+
+  /* Quantidades de produtos a serem selecionados para compra. */
+  "flex-layout.row#qty-sku": {
+    "children": [
+      "sku-selector",
+      "product-quantity"
+    ]
+  },
+
+  "product-price": {
+    "props": {
+      "showSavings": true,
+      "showListPrice": true
+    }
   }
 }

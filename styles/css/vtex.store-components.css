@@ -1,0 +1,33 @@
+.searchBarContainer {
+    background: #303030;
+}
+
+.logoContainer {
+    background: #303030;
+}
+
+.searchBarContainer {
+    color: #fff;
+}
+
+.searchIcon {
+    color: #fff;
+}
+
+.infoCardContainer {
+    width: 80%;
+    margin: auto;
+}
+
+.infoCardHeadline {
+    color: #fff;
+}
+
+.infoCardSubhead {
+    color: #fff;
+}
+.infoCardContainer {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    
+}

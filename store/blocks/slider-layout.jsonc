@@ -1,0 +1,69 @@
+{
+    /* Chama um Bloco com um Slider centrazado no meio de duas colunas de espaço.  */
+    "flex-layout.row#main1": {
+        "props": {
+            "marginTop": 6,
+            "marginBotton": 6,
+            "blockClass": "flexLayoutMain1"
+        },
+        "children": [
+            "flex-layout.col#spacer1",
+            "flex-layout.col#c1",
+            "flex-layout.col#spacer1"
+        ]
+    },
+
+    "flex-layout.col#spacer1": {
+        "props": {
+            "width": "33%"
+        }
+    },
+
+    "flex-layout.col#c1": {
+        "props": {
+            "width": "33%"
+        },
+        "children": ["slider-layout#home"]
+    },
+
+    "slider-layout#home": {
+        "children": [
+            "image#game1",
+            "image#game2",
+            "image#game3"
+        ],
+        "props": {
+            "autoplay": {
+                "timeout": 7000,
+                "stopOnHover": true
+            },
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true
+        }
+    },
+    "image#game1": {
+        "props": {
+            "width": 400,
+            "height": 220,
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9mCtVlxRDawMcZdKbW_R3Pk91lL1roulgw&usqp=CAU"
+        }
+    },
+    "image#game2": {
+        "props": {
+            "width": 400,
+            "height": 220,
+            "src": "https://cdn.cloudflare.steamstatic.com/steam/apps/238960/capsule_616x353.jpg?t=1627066053"
+        }
+    },
+    "image#game3": {
+        "props": {
+            "width": 400,
+            "height": 220,
+            "src": "https://i.ytimg.com/vi/xAPsmI_zDZs/maxresdefault.jpg"
+        }
+    }
+}

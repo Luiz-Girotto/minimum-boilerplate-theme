@@ -28,11 +28,20 @@
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
       "search-bar",
+      "flex-layout.col#spacer",
       "locale-switcher",
       "login",
       "minicart.v2"
     ]
   },
+
+  "search-bar": {
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true
+    }
+  },
+  
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -48,7 +57,7 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
       "width": "80"
     }
   },

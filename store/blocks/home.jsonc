@@ -1,15 +1,27 @@
 {
-  "store.home": { 
+  /* Chama os Blocos que estarão presentes na Home page. */
+  "store.home": {
     "blocks": [
-      "rich-text"
+      "tab-layout",
+      "info-card",
+      "flex-layout.row#main1",
+      "list-context.product-list"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+
+  /* Bloco de Info Card para apresentação de link para promoções. */
+  "info-card": {
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "https://img.ibxk.com.br/2016/12/01/01095050708068.jpg?w=1120&h=420&mode=crop&scale=both",
+      "headline": "Todas as promoções da semana.",
+      "subhead": "Todas as promoções da semana..",
+      "callToActionMode": "button",
+      "callToActionText": "Explore",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center",
+      "blockClass": "infoCard1"
     }
   }
 }

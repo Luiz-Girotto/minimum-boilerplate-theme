@@ -12,15 +12,23 @@
       "flex-layout.row#footer"
     ]
   },
+
+  /* Chama um texto */
   "flex-layout.row#footer": { 
     "children": [
-      "image"
+      "rich-text"
     ]
   },
-  "image": {
+
+  /* Texto contendo link para comunicação via whatsapp */
+  "rich-text": {
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Qualquer duvida entre em contato no [Whatsapp](https://api.whatsapp.com/send?phone=5534996761954&text=Bem%20vindo!).",
+      "textColor": "c-on-emphasis",
+      "font": "t-heading-5",
+      "blockClass": "whatsapp-message"
     }
   }
 }

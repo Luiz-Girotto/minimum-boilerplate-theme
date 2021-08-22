@@ -1,7 +1,103 @@
 {
+  /* Chama como serão apresentadas as pequisas. */
   "store.search": {
     "blocks": [
-      
+      "search-result-layout.customQuery"
     ]
+  },
+
+  /* Faz um query customizada para a pesquisa de produtos na aba de pesquisa. */
+  "search-result-layout.customQuery": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 10
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile"
+    ]
+  },
+
+  /* Chama como a pesquisa deve ser demonstrada em desktop.  */
+  "search-result-layout.desktop": {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "total-products.v2",
+      "order-by.v2",
+      "search-content#s",
+      "filter-navigator.v3",
+      "search-fetch-more"
+    ],
+    "props": {
+      "preventRouteChange": true,
+      "blockClass": "searchDesktop",
+      "defaultGalleryLayout": "grid"
+    }
+  },
+
+  /* Chama como a pesquisa deve ser demonstrada em mobile.  */
+  "search-result-layout.mobile": {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "total-products.v2",
+      "order-by.v2",
+      "search-content#s",
+      "filter-navigator.v3",
+      "search-fetch-more"
+    ],
+    "props": {
+      "preventRouteChange": true,
+      "blockClass": "searchMobile",
+      "categories": false,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+
+  /* Chama como o conteudo das pesquisas deve ser demonstrado.  */
+  "search-content#s": {
+    "blocks": [
+      "gallery#s",
+      "not-found"
+    ]
+  },
+
+  "gallery#s": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 4,
+            "desktop": 3,
+            "tablet": 3,
+            "phone": 2
+          }
+        }
+      ],
+      "GridSummary": "product-summary.shelf#s"
+    }
+  },
+
+  "product-summary.shelf#s": {
+    "children": [
+      "product-summary-name",
+      "product-images#l",
+      "product-selling-price",
+      "add-to-cart-button"
+    ]
+  },
+
+  "product-images#l": {
+    "props": {
+      "maxHeight": 220,
+      "showNavigationArrows": true,
+      "showPaginationDots": true
+    }
   }
 }

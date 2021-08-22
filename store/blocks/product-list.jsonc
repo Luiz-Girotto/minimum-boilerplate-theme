@@ -1,0 +1,43 @@
+{
+    /* Chama um bloco para a listagem de produtos. Que estarão dentre de um Slider. */
+    "list-context.product-list": {
+        "blocks": ["product-summary.shelf#l"],
+        "children": ["slider-layout"]
+      },
+
+      /* Chama os produtos, com suas dependencias.  */
+      "product-summary.shelf#l": {
+        "props": {
+          "blockClass": "summaryShelf1"
+        },
+        "children": [
+          "product-summary-name",
+          "product-images#l",
+          "product-selling-price",
+          "add-to-cart-button"
+        ]
+      },
+
+      /* Edita a forma que as imagens serão apresentadas. */
+      "product-images#l": {
+        "props": {
+          "maxHeight": 220,
+          "showNavigationArrows": true,
+          "showPaginationDots": true
+        }
+      },
+
+      /* Chama o Slider que contera os produtos. */
+      "slider-layout": {
+        "props": {
+            "itemsPerPage": {
+              "desktop": 4,
+              "tablet": 2,
+              "phone": 2
+            },
+            "infinite": true,
+            "showNavigationArrows": "desktopOnly",
+            "blockClass": "productListHome"
+          }
+      }
+}

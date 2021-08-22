@@ -1,0 +1,141 @@
+{
+  /* Chama as Tabs de pesquisas com diversos tematicas.  */
+  "tab-layout": {
+    "children": [
+      "tab-list#",
+      "tab-content#"
+    ]
+  },
+
+  /* Chama quantas e quais serias as tabs.  */
+  "tab-list#": {
+    "children": [
+      "tab-list.item#1",
+      "tab-list.item#2",
+      "tab-list.item#3",
+      "tab-list.item#4",
+      "tab-list.item#5"
+    ]
+  },
+  "tab-list.item#1": {
+    "props": {
+      "tabId": "ação",
+      "label": "Ação",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#2": {
+    "props": {
+      "tabId": "rpg",
+      "label": "RPG",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#3": {
+    "props": {
+      "tabId": "estratégia",
+      "label": "Estratégia",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#4": {
+    "props": {
+      "tabId": "aventura-casual",
+      "label": "Aventura e Casual",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#5": {
+    "props": {
+      "tabId": "simulador",
+      "label": "Simulador",
+      "defaultActiveTab": true
+    }
+  },
+
+  /* Chama qual seria o conteudo das tabs criadas.  */
+  "tab-content#": {
+    "children": [
+      "tab-content.item#1",
+      "tab-content.item#2",
+      "tab-content.item#3",
+      "tab-content.item#4",
+      "tab-content.item#5"
+    ]
+  },
+  "tab-content.item#1": {
+    "children": [
+      "rich-text#1"
+    ],
+    "props": {
+      "tabId": "ação"
+    }
+  },
+  "tab-content.item#2": {
+    "children": [
+      "rich-text#2"
+    ],
+    "props": {
+      "tabId": "rpg"
+    }
+  },
+  "tab-content.item#3": {
+    "children": [
+      "rich-text#3"
+    ],
+    "props": {
+      "tabId": "estratégia"
+    }
+  },
+  "tab-content.item#4": {
+    "children": [
+      "rich-text#4"
+    ],
+    "props": {
+      "tabId": "aventura-casual"
+    }
+  },
+  "tab-content.item#5": {
+    "children": [
+      "rich-text#5"
+    ],
+    "props": {
+      "tabId": "simulador"
+    }
+  },
+  "rich-text#1": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = ação",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#2": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = rpg",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#3": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = estratégia",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#4": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = aventura-casual",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#5": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = simulador",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  }
+}
